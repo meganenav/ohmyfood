@@ -1,0 +1,23 @@
+header {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logo-header-block{
+            height: 63px;
+            display: flex;
+                align-items: center;
+        }
+        .logo-header {
+            width: 162px;
+        }
+        .location-block {
+            width: 100%;
+            height: 50px;
+            background-color: $location-background;
+            display:flex;
+                align-items: center;
+                justify-content: center;
+                gap: 17px;
+        }
+}
