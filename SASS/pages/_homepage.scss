@@ -1,0 +1,19 @@
+main {
+    .headline {
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        text-align: center;
+        background-color: $Background;
+        padding: 50px 30px;
+        p {
+            font-weight: 300;
+            font-size: 1em;
+            color: $Grey;
+        }
+    }
+    .procedure{
+        padding: 20px;
+    }
+}
