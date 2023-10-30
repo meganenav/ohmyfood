@@ -34,6 +34,31 @@ header .location-block {
   gap: 17px;
 }
 
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px 25px;
+  background-color: #353535;
+  color: white;
+}
+footer .logo-text {
+  color: white;
+  font-family: "Shrikhand", serif;
+  text-decoration: none;
+  font-size: 1.125em;
+}
+footer ul {
+  font-size: 1em;
+  padding-left: 0;
+  margin: 0;
+}
+footer li {
+  list-style-type: none;
+}
+
 main .headline {
   display: flex;
   flex-direction: column;
