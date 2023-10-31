@@ -108,6 +108,7 @@ main .restaurants-list {
 main .restaurants-list .card {
   border-radius: 15px;
   background-color: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
 main .restaurants-list .card img {
   width: 100%;
