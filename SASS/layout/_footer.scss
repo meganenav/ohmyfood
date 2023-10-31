@@ -5,7 +5,6 @@ footer {
         gap: 16px;
     padding: 22px 25px;
     background-color: $Grey;
-    color: white;
 
     .logo-text {
         color: white;
@@ -16,5 +15,8 @@ footer {
 
     ul {
         font-size: 1em;
+        li a {
+            color: white;
+        }
     }
 }
