@@ -154,6 +154,24 @@ main .restaurants-list .card .card-subtitle {
   font-size: 1.0625em;
   margin: 0;
 }
+main .restaurants-list .card .card-liked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .restaurants-list .card .card-liked .heart-empty {
+  position: absolute;
+}
+main .restaurants-list .card .card-liked .heart-full {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s ease-in-out;
+}
+main .restaurants-list .card .card-liked .heart-full:hover {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
 
 .explore-button {
   border-radius: 25px;
