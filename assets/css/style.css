@@ -101,6 +101,24 @@ main .procedure li {
   flex-direction: row;
   gap: 10px;
 }
+main .procedure li .circle {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background: #9356DC;
+  color: white;
+  font-size: 14.182px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .procedure li .procedure-number {
+  left: -42px;
+  position: relative;
+}
+main .procedure li .procedure-icon {
+  margin-left: -30px;
+}
 main .restaurants-list {
   background-color: #F6F6F6;
   padding: 30px 20px;

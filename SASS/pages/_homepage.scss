@@ -33,6 +33,24 @@ main {
             display: flex;
                 flex-direction: row;
                 gap: 10px;
+            .circle {
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                background: $Primary;
+                color: white;
+                font-size: 14.182px;
+                display: flex;
+                    align-items: center;
+                    justify-content: center;
+            }
+            .procedure-number {
+                left: -42px;
+                position: relative;
+            }
+            .procedure-icon {
+                margin-left: -30px;
+            }
         }
     }
     .restaurants-list {
