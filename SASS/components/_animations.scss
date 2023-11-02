@@ -9,7 +9,7 @@ body{
         height: 100%;
         z-index: 1000;
         top: 0;
-        animation: disappear 1s 2s both;
+        animation: disappear 1s 3.2s both;
         .load {
             width: 3vh*20;
             height: 3vh*15;
@@ -50,6 +50,7 @@ body{
     }
     100% {
         opacity: 0;
+        display: none;
     }
 }
 @keyframes bar-y {
