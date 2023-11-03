@@ -22,11 +22,11 @@ body a {
   color: black;
 }
 
-body {
+.homepage {
   overflow-y: hidden;
   animation: bar-y 50ms 3s both;
 }
-body .container-loader {
+.homepage .container-loader {
   display: flex;
   background-color: white;
   position: fixed;
@@ -36,33 +36,33 @@ body .container-loader {
   top: 0;
   animation: disappear 1s 3.2s both;
 }
-body .container-loader .load {
+.homepage .container-loader .load {
   width: 60vh;
   height: 30vh;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
 }
-body .container-loader .load__bar {
+.homepage .container-loader .load__bar {
   background-color: #9356DC;
   height: 100%;
   width: 3vh;
   animation: bars 2s backwards infinite;
   animation-direction: alternate;
 }
-body .container-loader .load__bar.bar-1 {
+.homepage .container-loader .load__bar.bar-1 {
   animation-delay: 0.4s;
 }
-body .container-loader .load__bar.bar-2 {
+.homepage .container-loader .load__bar.bar-2 {
   animation-delay: 0.8s;
 }
-body .container-loader .load__bar.bar-3 {
+.homepage .container-loader .load__bar.bar-3 {
   animation-delay: 1.2s;
 }
-body .container-loader .load__bar.bar-4 {
+.homepage .container-loader .load__bar.bar-4 {
   animation-delay: 1.6s;
 }
-body .container-loader .load__bar.bar-5 {
+.homepage .container-loader .load__bar.bar-5 {
   animation-delay: 2s;
 }
 
@@ -334,7 +334,84 @@ main .restaurants-list .card .card-liked .heart-full:hover {
   transition: opacity 1s ease-in-out;
 }
 
-.explore-button {
+.page-restaurant img {
+  height: 275px;
+  width: 100%;
+  object-fit: cover;
+}
+.page-restaurant .title-restaurant {
+  padding: 32px 50px 0 20px;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-restaurant .menu-restaurant {
+  background-color: #F6F6F6;
+  border-radius: 50px 50px 0 0;
+  padding: 0 10px;
+}
+.page-restaurant .menu-restaurant .menu-list {
+  background-color: #F6F6F6;
+  border-radius: 50px 50px 0 0;
+}
+.page-restaurant .menu-restaurant .menu-list h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+  margin: 0;
+  padding: 40px 0 5px 0;
+}
+.page-restaurant .menu-restaurant .menu-list .line {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+.page-restaurant .menu-restaurant .menu-list .cards-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.page-restaurant .menu-restaurant .menu-list .cards-list .card {
+  padding: 15px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.page-restaurant .menu-restaurant .menu-list .cards-list .card .card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.page-restaurant .menu-restaurant .menu-list .cards-list .card .card-text .card-title h3 {
+  margin: 0;
+  font-weight: 500;
+}
+.page-restaurant .menu-restaurant .menu-list .cards-list .card .card-text .card-subtitle p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1em;
+}
+.page-restaurant .menu-restaurant .menu-list .cards-list .card .price {
+  font-weight: 700;
+  font-size: 1em;
+}
+.page-restaurant .menu-restaurant .order {
+  display: flex;
+  justify-content: center;
+}
+.page-restaurant .menu-restaurant .order .button-order {
+  margin: 40px 0;
+}
+
+.button-look {
   border-radius: 25px;
   border: none;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -344,6 +421,9 @@ main .restaurants-list .card .card-liked .heart-full:hover {
   height: 50px;
   width: 218px;
   padding: 13px 18.75px;
+}
+
+.explore-button {
   transition: opacity 500ms ease-in-out, box-shadow 500ms ease-in-out;
 }
 .explore-button:hover {

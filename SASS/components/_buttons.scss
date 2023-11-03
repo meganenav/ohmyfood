@@ -1,4 +1,4 @@
-.explore-button {
+.button-look {
     border-radius: 25px;
     border: none;
     background: $Button-Gradient;
@@ -8,6 +8,8 @@
     height: 50px;
     width: 218px;
     padding: 13px 18.75px;
+}
+.explore-button {    
     transition: 
         opacity 500ms ease-in-out,
         box-shadow 500ms ease-in-out;
