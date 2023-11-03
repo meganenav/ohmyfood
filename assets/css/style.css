@@ -120,12 +120,20 @@ header .location-block {
 }
 
 footer {
+  padding: 22px 25px;
+  background-color: #353535;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  padding: 22px 25px;
-  background-color: #353535;
+}
+@media (min-width: 1300px) {
+  footer {
+    padding: 30px 25px;
+    height: 54px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
 }
 footer .logo-text {
   color: white;
@@ -133,8 +141,20 @@ footer .logo-text {
   text-decoration: none;
   font-size: 1.125em;
 }
+@media (min-width: 1300px) {
+  footer .logo-text {
+    width: 138px;
+  }
+}
 footer ul {
   font-size: 1em;
+}
+@media (min-width: 1300px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
 }
 footer ul li a {
   color: white;
@@ -149,6 +169,11 @@ main .headline {
   background-color: #F6F6F6;
   padding: 50px 30px;
 }
+@media (min-width: 1300px) {
+  main .headline {
+    padding: 50px 180px;
+  }
+}
 main .headline p {
   font-weight: 300;
   font-size: 1em;
@@ -157,6 +182,11 @@ main .headline p {
 main .procedure {
   padding: 30px 20px;
 }
+@media (min-width: 1300px) {
+  main .procedure {
+    padding: 30px 180px;
+  }
+}
 main .procedure h1 {
   margin-bottom: 26px;
 }
@@ -164,6 +194,11 @@ main .procedure ul {
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+@media (min-width: 1024px) {
+  main .procedure ul {
+    flex-direction: row;
+  }
 }
 main .procedure li {
   font-size: 1em;
@@ -175,6 +210,11 @@ main .procedure li {
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+@media (min-width: 1024px) {
+  main .procedure li {
+    flex: 1;
+  }
 }
 main .procedure li .circle {
   border-radius: 50%;
@@ -201,68 +241,101 @@ main .restaurants-list {
   flex-direction: column;
   gap: 18px;
 }
-main .restaurants-list .card {
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  position: relative;
+@media (min-width: 1300px) {
+  main .restaurants-list {
+    padding: 30px 180px;
+  }
 }
-main .restaurants-list .card img {
-  width: 100%;
-  height: 231px;
-  object-fit: cover;
-  border-radius: 15px 15px 0 0;
-}
-main .restaurants-list .card .new-restaurant {
-  width: 80px;
-  height: 29px;
-  font-weight: 500;
-  font-size: 0.875em;
-  background-color: #99E2D0;
-  color: #008766;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 100;
+main .restaurants-list .cards-section {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex-direction: column;
+  gap: 18px;
 }
-main .restaurants-list .card .card-content {
-  padding: 12px 30px 12px 13px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+@media (min-width: 1024px) {
+  main .restaurants-list .cards-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 50px;
+  }
 }
-main .restaurants-list .card .card-title {
-  font-weight: 700;
-  font-size: 1.125em;
-  margin: 0;
+@media (min-width: 1024px) and (min-width: 1024px) {
+  main .restaurants-list .cards-section a {
+    width: 47%;
+  }
 }
-main .restaurants-list .card .card-subtitle {
-  font-weight: 300;
-  font-size: 1.0625em;
-  margin: 0;
+@media (min-width: 1024px) {
+  main .restaurants-list .cards-section .card {
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  main .restaurants-list .cards-section .card img {
+    width: 100%;
+    height: 231px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
 }
-main .restaurants-list .card .card-liked {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (min-width: 1024px) and (max-width: 450px) {
+  main .restaurants-list .cards-section .card img {
+    height: 180px;
+  }
 }
-main .restaurants-list .card .card-liked .heart-empty {
-  position: absolute;
-}
-main .restaurants-list .card .card-liked .heart-full {
-  position: absolute;
-  opacity: 0;
-  z-index: 1;
-  transition: opacity 1s ease-in-out;
-}
-main .restaurants-list .card .card-liked .heart-full:hover {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
+@media (min-width: 1024px) {
+  main .restaurants-list .cards-section .card .new-restaurant {
+    width: 80px;
+    height: 29px;
+    font-weight: 500;
+    font-size: 0.875em;
+    background-color: #99E2D0;
+    color: #008766;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  main .restaurants-list .cards-section .card .card-content {
+    padding: 12px 30px 12px 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main .restaurants-list .cards-section .card .card-title {
+    font-weight: 700;
+    font-size: 1.125em;
+    margin: 0;
+  }
+  main .restaurants-list .cards-section .card .card-subtitle {
+    font-weight: 300;
+    font-size: 1.0625em;
+    margin: 0;
+  }
+  main .restaurants-list .cards-section .card .card-liked {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .restaurants-list .cards-section .card .card-liked .heart-empty {
+    position: absolute;
+  }
+  main .restaurants-list .cards-section .card .card-liked .heart-full {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  main .restaurants-list .cards-section .card .card-liked .heart-full:hover {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
 }
 
 .explore-button {
