@@ -334,6 +334,18 @@ main .restaurants-list .card .card-liked .heart-full:hover {
   transition: opacity 1s ease-in-out;
 }
 
+.header-restaurant {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 42px;
+}
+.header-restaurant .return-homepage {
+  position: absolute;
+  top: 14px;
+  left: 17px;
+}
+
 .page-restaurant img {
   height: 275px;
   width: 100%;
@@ -352,6 +364,8 @@ main .restaurants-list .card .card-liked .heart-full:hover {
   background-color: #F6F6F6;
   border-radius: 50px 50px 0 0;
   padding: 0 10px;
+  margin-top: -50px;
+  position: relative;
 }
 .page-restaurant .menu-restaurant .menu-list {
   background-color: #F6F6F6;
