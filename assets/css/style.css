@@ -265,77 +265,73 @@ main .restaurants-list .cards-section {
     width: 47%;
   }
 }
-@media (min-width: 1024px) {
-  main .restaurants-list .cards-section .card {
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-  main .restaurants-list .cards-section .card img {
-    width: 100%;
-    height: 231px;
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
-  }
+main .restaurants-list .card {
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
-@media (min-width: 1024px) and (max-width: 450px) {
-  main .restaurants-list .cards-section .card img {
+main .restaurants-list .card img {
+  width: 100%;
+  height: 231px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+@media (max-width: 450px) {
+  main .restaurants-list .card img {
     height: 180px;
   }
 }
-@media (min-width: 1024px) {
-  main .restaurants-list .cards-section .card .new-restaurant {
-    width: 80px;
-    height: 29px;
-    font-weight: 500;
-    font-size: 0.875em;
-    background-color: #99E2D0;
-    color: #008766;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  main .restaurants-list .cards-section .card .card-content {
-    padding: 12px 30px 12px 13px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  main .restaurants-list .cards-section .card .card-title {
-    font-weight: 700;
-    font-size: 1.125em;
-    margin: 0;
-  }
-  main .restaurants-list .cards-section .card .card-subtitle {
-    font-weight: 300;
-    font-size: 1.0625em;
-    margin: 0;
-  }
-  main .restaurants-list .cards-section .card .card-liked {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main .restaurants-list .cards-section .card .card-liked .heart-empty {
-    position: absolute;
-  }
-  main .restaurants-list .cards-section .card .card-liked .heart-full {
-    position: absolute;
-    opacity: 0;
-    z-index: 1;
-    transition: opacity 1s ease-in-out;
-  }
-  main .restaurants-list .cards-section .card .card-liked .heart-full:hover {
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
-  }
+main .restaurants-list .card .new-restaurant {
+  width: 80px;
+  height: 29px;
+  font-weight: 500;
+  font-size: 0.875em;
+  background-color: #99E2D0;
+  color: #008766;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+main .restaurants-list .card .card-content {
+  padding: 12px 30px 12px 13px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main .restaurants-list .card .card-title {
+  font-weight: 700;
+  font-size: 1.125em;
+  margin: 0;
+}
+main .restaurants-list .card .card-subtitle {
+  font-weight: 300;
+  font-size: 1.0625em;
+  margin: 0;
+}
+main .restaurants-list .card .card-liked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .restaurants-list .card .card-liked .heart-empty {
+  position: absolute;
+}
+main .restaurants-list .card .card-liked .heart-full {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s ease-in-out;
+}
+main .restaurants-list .card .card-liked .heart-full:hover {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 
 .explore-button {
