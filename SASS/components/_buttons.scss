@@ -21,3 +21,14 @@
             box-shadow 500ms ease-in-out;
     }
 }
+.fa-heart {
+    font-size: 22px;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #000;
+    &:hover {
+        background: $Button-Gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0;
+    }
+}

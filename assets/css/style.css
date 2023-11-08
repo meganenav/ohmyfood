@@ -427,31 +427,65 @@ main .restaurants-list .card .card-liked .heart-full:hover {
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card {
   padding: 15px;
+  position: relative;
   background: white;
   border-radius: 15px;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-restaurant .menu-restaurant .menu-list .cards-list .card:hover > .coche {
+  animation: coche-appear 1s both;
+}
+.page-restaurant .menu-restaurant .menu-list .cards-list .card:hover > .card-content > .price {
+  animation: translate-menu-item 1s both;
+}
+.page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  flex: 1 0 0;
 }
-.page-restaurant .menu-restaurant .menu-list .cards-list .card .card-text {
+.page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content .card-text {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.page-restaurant .menu-restaurant .menu-list .cards-list .card .card-text .card-title h3 {
+.page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content .card-text .card-title h3 {
   margin: 0;
   font-weight: 500;
 }
-.page-restaurant .menu-restaurant .menu-list .cards-list .card .card-text .card-subtitle p {
+.page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content .card-text .card-subtitle p {
   margin: 0;
   font-weight: 300;
   font-size: 1em;
 }
-.page-restaurant .menu-restaurant .menu-list .cards-list .card .price {
+.page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content .price {
   font-weight: 700;
   font-size: 1em;
+}
+.page-restaurant .menu-restaurant .menu-list .cards-list .card .coche {
+  position: absolute;
+  right: -60px;
+  background: #99E2D0;
+  height: 46px;
+  width: 25px;
+  padding: 15px;
+  border-radius: 0 15px 15px 0;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-restaurant .menu-restaurant .menu-list .cards-list .card .coche .fa-check {
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 50%;
+  padding: 5px;
 }
 .page-restaurant .menu-restaurant .order {
   display: flex;
@@ -461,6 +495,22 @@ main .restaurants-list .card .card-liked .heart-full:hover {
   margin: 40px 0;
 }
 
+@keyframes coche-appear {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-60px);
+  }
+}
+@keyframes translate-menu-item {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-60px);
+  }
+}
 .button-look {
   border-radius: 25px;
   border: none;
@@ -480,6 +530,18 @@ main .restaurants-list .card .card-liked .heart-full:hover {
   opacity: 0.8;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
   transition: opacity 500ms ease-in-out, box-shadow 500ms ease-in-out;
+}
+
+.fa-heart {
+  font-size: 22px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #000;
+}
+.fa-heart:hover {
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

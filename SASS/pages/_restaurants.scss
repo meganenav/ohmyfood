@@ -60,35 +60,71 @@
                     flex-direction: column;
                     gap: 10px;
                 .card {
+                    &:hover {
+                        & > .coche{
+                            animation: coche-appear 1s both;
+                        }
+                        & > .card-content > .price{
+                            animation: translate-menu-item 1s both;
+                        }
+                    }
                     padding: 15px;
+                    position: relative;
                     background: white;
                     border-radius: 15px;
                     box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
+                    overflow: hidden;
                     display: flex;
                         flex-direction: row;
                         justify-content: space-between;
-                        align-items: flex-end;
-                    .card-text {
-                        display: flex;
-                            flex-direction: column;
-                            gap: 5px;
-                            .card-title h3 {
-                                margin: 0;
-                                font-weight: 500;
+                        align-items: center;
+                        .card-content {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                            flex: 1 0 0;
+                            .card-text {
+                                display: flex;
+                                    flex-direction: column;
+                                    gap: 5px;
+                                    .card-title h3 {
+                                        margin: 0;
+                                        font-weight: 500;
+                                    }
+                                    .card-subtitle p {
+                                        margin: 0;
+                                        font-weight: 300;
+                                        font-size: 1em;
+                                    }
                             }
-                            .card-subtitle p {
-                                margin: 0;
-                                font-weight: 300;
+                            .price {
+                                font-weight: 700;
                                 font-size: 1em;
                             }
-                    }
-                    .price {
-                        font-weight: 700;
-                        font-size: 1em;
-                    }
+                        }
+                        .coche {
+                            position: absolute;
+                            right: -60px;
+                            background: $Green;
+                            height: 46px;
+                            width: 25px;
+                            padding: 15px;                    
+                            border-radius: 0 15px 15px 0;
+                            opacity: 1;
+                            display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            .fa-check {
+                                background-color: white;
+                                color: $Green;
+                                border-radius: 50%;
+                                padding: 5px;
+                            }
+                        }
                 }
-            }
 
+            }
         }
         .order {
             display: flex;
@@ -98,5 +134,22 @@
             }
         }
 
+    }
+}
+
+@keyframes coche-appear {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-60px);
+    }
+}
+@keyframes translate-menu-item {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-60px);
     }
 }
