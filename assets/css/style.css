@@ -96,6 +96,29 @@ body a {
     overflow-y: auto;
   }
 }
+.entrees {
+  animation: menu-appear 1.5s 0.5s both;
+}
+
+.plats {
+  animation: menu-appear 1.5s 1s both;
+}
+
+.desserts {
+  animation: menu-appear 1.5s 1.5s both;
+}
+
+@keyframes menu-appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header {
   display: flex;
   flex-direction: column;
@@ -382,6 +405,7 @@ main .restaurants-list .card .card-liked .heart-full:hover {
 .page-restaurant .menu-restaurant .menu-list {
   background-color: #F6F6F6;
   border-radius: 50px 50px 0 0;
+  opacity: 0;
 }
 .page-restaurant .menu-restaurant .menu-list h2 {
   text-transform: uppercase;
