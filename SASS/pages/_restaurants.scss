@@ -39,8 +39,6 @@
             margin: -50px 180px 0 180px;
         }
         .menu-list {
-            background-color: $Background;
-            border-radius: 50px 50px 0 0;
             opacity: 0;
             h2 {
                 text-transform: uppercase;
@@ -72,7 +70,7 @@
                     position: relative;
                     background: white;
                     border-radius: 15px;
-                    box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
+                    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.10);
                     overflow: hidden;
                     display: flex;
                         flex-direction: row;

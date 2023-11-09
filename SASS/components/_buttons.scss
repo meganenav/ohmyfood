@@ -1,4 +1,4 @@
-.button-look {
+.button-gradient {
     border-radius: 25px;
     border: none;
     background: $Button-Gradient;
@@ -7,9 +7,7 @@
     font-size: 1em;
     height: 50px;
     width: 218px;
-    padding: 13px 18.75px;
-}
-.explore-button {    
+    padding: 13px 18.75px;    
     transition: 
         opacity 500ms ease-in-out,
         box-shadow 500ms ease-in-out;
