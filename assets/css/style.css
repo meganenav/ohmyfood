@@ -256,6 +256,10 @@ main .procedure li .procedure-number {
 }
 main .procedure li .procedure-icon {
   margin-left: -30px;
+  color: #7E7E7E;
+}
+main .procedure li .procedure-icon.fa-store {
+  color: #9356DC;
 }
 main .restaurants-list {
   background-color: #F6F6F6;
@@ -342,19 +346,6 @@ main .restaurants-list .card .card-liked {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*.heart-empty {
-      position: absolute;
-  }
-  .heart-full {
-      position: absolute;
-      opacity: 0;
-      z-index: 1;
-      transition: opacity 1s ease-in-out;
-      &:hover {
-          opacity: 1;
-          transition: opacity 1s ease-in-out;
-      }
-  }*/
 }
 
 .header-restaurant {
