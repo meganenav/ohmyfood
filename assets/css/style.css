@@ -381,7 +381,7 @@ main .restaurants-list .card .card-liked .heart-full:hover {
   font-size: 1.2em;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 @media (min-width: 1300px) {
   .page-restaurant .title-restaurant {
@@ -534,10 +534,21 @@ main .restaurants-list .card .card-liked .heart-full:hover {
 
 .fa-heart {
   font-size: 22px;
+  position: absolute;
   color: transparent;
-  -webkit-text-stroke: 1.5px #000;
 }
-.fa-heart:hover {
+.fa-heart.empty {
+  -webkit-text-stroke: 1.5px #000;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+.fa-heart.full {
+  opacity: 0;
+}
+.fa-heart.full:hover {
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
