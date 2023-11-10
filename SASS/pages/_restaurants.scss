@@ -70,6 +70,12 @@
                         & > .card-content > .price{
                             animation: translate-menu-item 1s both;
                         }
+                        & > .card-content > .card-text > .card-title h3{
+                            animation: ellipsis-animation-title 1s both;
+                        }
+                        & > .card-content > .card-text > .card-subtitle p{
+                            animation: ellipsis-animation-p 1s both;
+                        }
                     }
                     padding: 15px;
                     position: relative;
@@ -86,19 +92,30 @@
                             flex-direction: row;
                             justify-content: space-between;
                             align-items: flex-end;
-                            flex: 1 0 0;
+                            flex: 1 1 100%;
+                            width: 90%;
                             .card-text {
                                 display: flex;
                                     flex-direction: column;
+                                    min-width: 0;
+                                    flex: 1 1 100%;
                                     gap: 5px;
                                     .card-title h3 {
                                         margin: 0;
                                         font-weight: 500;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        width: calc(100%);
                                     }
                                     .card-subtitle p {
                                         margin: 0;
                                         font-weight: 300;
                                         font-size: 1em;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        width: calc(100%);
                                     }
                             }
                             .price {
@@ -154,5 +171,21 @@
     }
     100% {
         transform: translateX(-60px);
+    }
+}
+@keyframes ellipsis-animation-title {
+    0% {
+        
+    }
+    100% {
+        width: calc(90%);
+    }
+}
+@keyframes ellipsis-animation-p {
+    0% {
+        
+    }
+    100% {
+        width: calc(70%);
     }
 }

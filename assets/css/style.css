@@ -455,26 +455,43 @@ main .restaurants-list .card .card-liked {
 .page-restaurant .menu-restaurant .menu-list .cards-list .card:hover > .card-content > .price {
   animation: translate-menu-item 1s both;
 }
+.page-restaurant .menu-restaurant .menu-list .cards-list .card:hover > .card-content > .card-text > .card-title h3 {
+  animation: ellipsis-animation-title 1s both;
+}
+.page-restaurant .menu-restaurant .menu-list .cards-list .card:hover > .card-content > .card-text > .card-subtitle p {
+  animation: ellipsis-animation-p 1s both;
+}
 .page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  flex: 1 0 0;
+  flex: 1 1 100%;
+  width: 90%;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content .card-text {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  flex: 1 1 100%;
   gap: 5px;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content .card-text .card-title h3 {
   margin: 0;
   font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content .card-text .card-subtitle p {
   margin: 0;
   font-weight: 300;
   font-size: 1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content .price {
   font-weight: 700;
@@ -521,6 +538,16 @@ main .restaurants-list .card .card-liked {
   }
   100% {
     transform: translateX(-60px);
+  }
+}
+@keyframes ellipsis-animation-title {
+  100% {
+    width: 90%;
+  }
+}
+@keyframes ellipsis-animation-p {
+  100% {
+    width: 70%;
   }
 }
 .button-gradient {
