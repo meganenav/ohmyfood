@@ -193,7 +193,7 @@ main .headline {
   background-color: #F6F6F6;
   padding: 50px 30px;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1080px) {
   main .headline {
     padding: 50px 180px;
   }
@@ -206,7 +206,7 @@ main .headline p {
 main .procedure {
   padding: 30px 20px;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1080px) {
   main .procedure {
     padding: 30px 180px;
   }
@@ -219,7 +219,7 @@ main .procedure ul {
   flex-direction: column;
   gap: 25px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   main .procedure ul {
     flex-direction: row;
   }
@@ -230,14 +230,20 @@ main .procedure li {
   border-radius: 20px;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  padding: 30px 40px 30px 30px;
+  padding: 30px 40px 30px;
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   main .procedure li {
     flex: 1;
+    padding: 30px 0 30px 40px;
+  }
+}
+@media (min-width: 1300px) {
+  main .procedure li {
+    padding: 30px 40px 30px 40px;
   }
 }
 main .procedure li:hover {
@@ -272,7 +278,7 @@ main .restaurants-list {
   flex-direction: column;
   gap: 18px;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1080px) {
   main .restaurants-list {
     padding: 30px 180px;
   }
@@ -282,7 +288,7 @@ main .restaurants-list .cards-section {
   flex-direction: column;
   gap: 18px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1080px) {
   main .restaurants-list .cards-section {
     display: flex;
     flex-direction: row;
@@ -291,7 +297,12 @@ main .restaurants-list .cards-section {
     column-gap: 50px;
   }
 }
-@media (min-width: 1024px) and (min-width: 1024px) {
+@media (min-width: 1080px) and (min-width: 1080px) {
+  main .restaurants-list .cards-section a {
+    width: 46%;
+  }
+}
+@media (min-width: 1080px) and (min-width: 1300px) {
   main .restaurants-list .cards-section a {
     width: 47%;
   }
@@ -381,7 +392,7 @@ main .restaurants-list .card .card-liked {
   justify-content: space-between;
   align-items: flex-start;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1080px) {
   .page-restaurant .title-restaurant {
     justify-content: center;
     gap: 20px;
@@ -394,10 +405,15 @@ main .restaurants-list .card .card-liked {
   margin-top: -50px;
   position: relative;
 }
+@media (min-width: 1080px) {
+  .page-restaurant .menu-restaurant {
+    padding: 0 20px;
+    margin: -50px 180px 0 180px;
+  }
+}
 @media (min-width: 1300px) {
   .page-restaurant .menu-restaurant {
     padding: 0 180px;
-    margin: -50px 180px 0 180px;
   }
 }
 .page-restaurant .menu-restaurant .menu-list {

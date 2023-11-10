@@ -25,7 +25,7 @@
         display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            @media (min-width: 1300px) {
+            @media (min-width: 1080px) {
                 justify-content: center;
                 gap: 20px;
             }
@@ -36,9 +36,12 @@
         padding: 0 10px;
         margin-top: -50px;
         position: relative;
+        @media (min-width: 1080px) {
+            padding: 0 20px; 
+            margin: -50px 180px 0 180px;
+        }
         @media (min-width: 1300px) {
             padding: 0 180px; 
-            margin: -50px 180px 0 180px;
         }
         .menu-list {
             opacity: 0;
