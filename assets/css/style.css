@@ -390,13 +390,16 @@ main .restaurants-list .card .card-liked {
   font-size: 1.2em;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
 }
 @media (min-width: 1080px) {
   .page-restaurant .title-restaurant {
     justify-content: center;
     gap: 20px;
   }
+}
+.page-restaurant .title-restaurant .card-liked {
+  display: flex;
+  align-items: center;
 }
 .page-restaurant .menu-restaurant {
   background-color: #F6F6F6;
@@ -574,7 +577,7 @@ main .restaurants-list .card .card-liked {
   color: transparent;
 }
 .fa-heart.empty {
-  -webkit-text-stroke: 1.5px #000;
+  -webkit-text-stroke: 1px #000;
 }
 .fa-heart.full {
   opacity: 0;

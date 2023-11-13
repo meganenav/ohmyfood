@@ -24,7 +24,7 @@
     position: absolute;
     color: transparent;
     &.empty {
-        -webkit-text-stroke: 1.5px #000;
+        -webkit-text-stroke: 1px #000;
     }
     &.full {   
         opacity: 0; 

@@ -24,10 +24,13 @@
         font-size: 1.2em;
         display: flex;
             justify-content: space-between;
-            align-items: flex-start;
             @media (min-width: 1080px) {
                 justify-content: center;
                 gap: 20px;
+            }
+            .card-liked {
+                display: flex;
+                    align-items: center;
             }
     }
     .menu-restaurant {
