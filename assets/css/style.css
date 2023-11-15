@@ -24,7 +24,7 @@ body a {
 
 .homepage {
   overflow-y: hidden;
-  animation: bar-y 50ms 3s both;
+  animation: bar-y 50ms 3.2s both;
 }
 .homepage .container-loader {
   display: flex;
