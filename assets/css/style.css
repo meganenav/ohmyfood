@@ -453,16 +453,20 @@ main .restaurants-list .card .card-liked {
   align-items: center;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card:hover > .coche {
-  animation: coche-appear 1s both;
+  transition: all 1s ease;
+  right: 0;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card:hover > .card-content > .price {
-  animation: translate-menu-item 1s both;
+  transition: all 1s ease;
+  right: 60px;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card:hover > .card-content > .card-text > .card-title h3 {
-  animation: ellipsis-animation-title 1s both;
+  transition: all 1s ease;
+  width: 90%;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card:hover > .card-content > .card-text > .card-subtitle p {
-  animation: ellipsis-animation-p 1s both;
+  transition: all 1s ease;
+  width: 70%;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content {
   display: flex;
@@ -480,6 +484,7 @@ main .restaurants-list .card .card-liked {
   gap: 5px;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content .card-text .card-title h3 {
+  transition: width 1s ease;
   margin: 0;
   font-weight: 500;
   text-overflow: ellipsis;
@@ -488,6 +493,7 @@ main .restaurants-list .card .card-liked {
   width: 100%;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content .card-text .card-subtitle p {
+  transition: width 1s ease;
   margin: 0;
   font-weight: 300;
   font-size: 1em;
@@ -497,10 +503,14 @@ main .restaurants-list .card .card-liked {
   width: 100%;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content .price {
+  transition: right 1s ease;
   font-weight: 700;
   font-size: 1em;
+  position: relative;
+  right: 0;
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card .coche {
+  transition: right 1s ease;
   position: absolute;
   right: -60px;
   background: #99E2D0;
@@ -527,32 +537,6 @@ main .restaurants-list .card .card-liked {
   margin: 40px 0;
 }
 
-@keyframes coche-appear {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-60px);
-  }
-}
-@keyframes translate-menu-item {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-60px);
-  }
-}
-@keyframes ellipsis-animation-title {
-  100% {
-    width: 90%;
-  }
-}
-@keyframes ellipsis-animation-p {
-  100% {
-    width: 70%;
-  }
-}
 .button-gradient {
   border-radius: 25px;
   border: none;

@@ -68,16 +68,20 @@
                 .card {
                     &:hover {
                         & > .coche{
-                            animation: coche-appear 1s both;
+                            transition: all 1s ease;
+                            right: 0;
                         }
                         & > .card-content > .price{
-                            animation: translate-menu-item 1s both;
+                            transition: all 1s ease;
+                            right: 60px;
                         }
                         & > .card-content > .card-text > .card-title h3{
-                            animation: ellipsis-animation-title 1s both;
+                            transition: all 1s ease;
+                            width: calc(90%);
                         }
                         & > .card-content > .card-text > .card-subtitle p{
-                            animation: ellipsis-animation-p 1s both;
+                            transition: all 1s ease;
+                            width: calc(70%);
                         }
                     }
                     padding: 15px;
@@ -92,10 +96,10 @@
                         align-items: center;
                         .card-content {
                             display: flex;
-                            flex-direction: row;
-                            justify-content: space-between;
-                            align-items: flex-end;
-                            flex: 1 1 100%;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: flex-end;
+                                flex: 1 1 100%;
                             width: 90%;
                             .card-text {
                                 display: flex;
@@ -104,6 +108,7 @@
                                     flex: 1 1 100%;
                                     gap: 5px;
                                     .card-title h3 {
+                                        transition: width 1s ease;
                                         margin: 0;
                                         font-weight: 500;
                                         text-overflow: ellipsis;
@@ -112,6 +117,7 @@
                                         width: calc(100%);
                                     }
                                     .card-subtitle p {
+                                        transition: width 1s ease;
                                         margin: 0;
                                         font-weight: 300;
                                         font-size: 1em;
@@ -122,11 +128,15 @@
                                     }
                             }
                             .price {
+                                transition: right 1s ease;
                                 font-weight: 700;
                                 font-size: 1em;
+                                position: relative;
+                                right: 0;
                             }
                         }
                         .coche {
+                            transition: right 1s ease;
                             position: absolute;
                             right: -60px;
                             background: $Green;
@@ -157,38 +167,5 @@
             }
         }
 
-    }
-}
-
-@keyframes coche-appear {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-60px);
-    }
-}
-@keyframes translate-menu-item {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-60px);
-    }
-}
-@keyframes ellipsis-animation-title {
-    0% {
-        
-    }
-    100% {
-        width: calc(90%);
-    }
-}
-@keyframes ellipsis-animation-p {
-    0% {
-        
-    }
-    100% {
-        width: calc(70%);
     }
 }
