@@ -151,7 +151,7 @@ footer {
   align-items: flex-start;
   gap: 16px;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1080px) {
   footer {
     padding: 30px 25px;
     height: 54px;
@@ -165,7 +165,7 @@ footer .logo-text {
   text-decoration: none;
   font-size: 1.125em;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1080px) {
   footer .logo-text {
     width: 138px;
   }
@@ -173,7 +173,7 @@ footer .logo-text {
 footer ul {
   font-size: 1em;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1080px) {
   footer ul {
     display: flex;
     flex-direction: row;
@@ -219,9 +219,15 @@ main .procedure ul {
   flex-direction: column;
   gap: 25px;
 }
+@media (min-width: 768px) {
+  main .procedure ul {
+    padding: 0 200px;
+  }
+}
 @media (min-width: 1200px) {
   main .procedure ul {
     flex-direction: row;
+    padding: 0;
   }
 }
 main .procedure li {
@@ -325,6 +331,16 @@ main .restaurants-list .card img {
 @media (max-width: 450px) {
   main .restaurants-list .card img {
     height: 180px;
+  }
+}
+@media (min-width: 768px) {
+  main .restaurants-list .card img {
+    height: 300px;
+  }
+}
+@media (min-width: 1080px) {
+  main .restaurants-list .card img {
+    height: 231px;
   }
 }
 main .restaurants-list .card .new-restaurant {

@@ -28,8 +28,12 @@ main {
             display: flex;
                 flex-direction: column;
                 gap: 25px;
+                @media (min-width: 768px) {
+                    padding: 0 200px;
+                }
                 @media (min-width: 1200px) {
                     flex-direction: row;
+                    padding: 0;
                 }
         }
         li {
@@ -121,6 +125,12 @@ main {
                 border-radius: 15px 15px 0 0;
                 @media (max-width: 450px) {
                     height: 180px;
+                }
+                @media (min-width: 768px) {
+                    height: 300px;
+                }
+                @media (min-width: 1080px) {
+                    height: 231px;
                 }
             }
             .new-restaurant {
