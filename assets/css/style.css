@@ -321,6 +321,7 @@ main .restaurants-list .card {
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   position: relative;
+  flex: 1 1 40%;
 }
 main .restaurants-list .card:hover {
   transform: scale(1.02);
@@ -380,6 +381,9 @@ main .restaurants-list .card .card-subtitle {
   margin: 0;
 }
 main .restaurants-list .card .card-liked {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
