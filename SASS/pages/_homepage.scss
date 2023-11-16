@@ -9,14 +9,20 @@ main {
         text-align: center;
         background-color: $Background;
         padding: 50px 30px;
-        /* Règles CSS à suivre à partir de 1080px */
-        @media (min-width: 1080px) {
-            padding: 50px 180px;
+        h1 {
+            font-size: 1.5em;
         }
         p {
             font-weight: 300;
-            font-size: 1em;
+            font-size: 1.125em;
             color: $Grey;
+        }        
+        /* Règles CSS à suivre à partir de 1080px */
+        @media (min-width: 1080px) {
+            h1 {
+                font-size: 2em;
+            }
+            padding: 50px 180px;
         }
     }
     /* Partie fonctionnement */
@@ -27,6 +33,7 @@ main {
             padding: 30px 180px;
         }
         h1 {
+            font-size: 1.5em;
             margin-bottom: 26px;
         }
         ul {
@@ -93,6 +100,9 @@ main {
     .restaurants-list {
         background-color: $Background;
         padding: 30px 20px;
+        h1 {
+            font-size: 1.5em;
+        }
         /* Règles CSS à suivre à partir de 1080px */
         @media (min-width: 1080px) {
             padding: 30px 180px;
@@ -121,8 +131,8 @@ main {
                                 width: 47%;
                             }
                         }
+                }
             }
-    }
 
         .card {
             border-radius: 15px;
