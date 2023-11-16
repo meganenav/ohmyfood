@@ -1,3 +1,5 @@
+/* Pages des menus des restaurants*/
+/* Header spécifiques aux pages des restaurants */
 .header-restaurant {
     flex-direction: row;
     justify-content: space-between;
@@ -5,12 +7,14 @@
     .return-homepage {
         .fa-arrow-left {
             font-size: 30px;
+            /* La flèche se décale lors du passage de la souris */
             &:hover {
                 transform: translateX(5px);
             }
         }
     }
 }
+/* Corps de la page du restaurant */
 .page-restaurant {
     img {
         height: 275px;
@@ -24,10 +28,11 @@
         font-size: 1.2em;
         display: flex;
             justify-content: space-between;
+            /* Règles CSS à suivre à partir de 1080px */
             @media (min-width: 1080px) {
                 justify-content: center;
                 gap: 20px;
-            }
+            } 
             .card-liked {
                 display: flex;
                     align-items: center;
@@ -39,10 +44,12 @@
         padding: 0 10px;
         margin-top: -50px;
         position: relative;
+        /* Règles CSS à suivre à partir de 1080px */
         @media (min-width: 1080px) {
             padding: 0 20px; 
             margin: -50px 180px 0 180px;
         }
+        /* Règles CSS à suivre à partir de 1300px */
         @media (min-width: 1300px) {
             padding: 0 180px; 
         }
@@ -66,19 +73,24 @@
                     flex-direction: column;
                     gap: 10px;
                 .card {
+                    /* Au passage de la souris, les transitions se lancent */
                     &:hover {
+                        /* La coche se déplace vers la gauche */
                         & > .coche{
                             transition: all 1s ease;
                             right: 0;
                         }
+                        /* Le prix se déplace en même temps vers la gauche */
                         & > .card-content > .price{
                             transition: all 1s ease;
                             right: 60px;
                         }
+                        /* Le titre du plat subit une ellipse si nécessaire lors du déplacement de la coche */
                         & > .card-content > .card-text > .card-title h3{
                             transition: all 1s ease;
                             width: calc(90%);
                         }
+                        /* Le descriptif du plat subit une ellipse si nécessaire lors du déplacement de la coche et du prix */
                         & > .card-content > .card-text > .card-subtitle p{
                             transition: all 1s ease;
                             width: calc(70%);
@@ -107,6 +119,7 @@
                                     min-width: 0;
                                     flex: 1 1 100%;
                                     gap: 5px;
+                                    /* On affecte une ellipse au titre si besoin */
                                     .card-title h3 {
                                         transition: width 1s ease;
                                         margin: 0;
@@ -116,6 +129,7 @@
                                         overflow: hidden;
                                         width: calc(100%);
                                     }
+                                    /* On affecte une ellipse au descriptif si besoin*/
                                     .card-subtitle p {
                                         transition: width 1s ease;
                                         margin: 0;
