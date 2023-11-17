@@ -954,18 +954,26 @@ main .restaurants-list .card .card-liked {
 }
 .fa-heart.empty {
   -webkit-text-stroke: 1px #000;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.fa-heart.empty:hover {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.fa-heart.empty:hover + .full {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 .fa-heart.full {
-  opacity: 0;
-  transition: all 1s ease-in-out;
-}
-.fa-heart.full:hover {
-  opacity: 1;
-  transition: all 1s ease-in-out;
+  z-index: 1;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

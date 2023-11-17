@@ -27,17 +27,25 @@
     color: transparent;
     &.empty {
         -webkit-text-stroke: 1px #000;
-    }
-    &.full {   
-        opacity: 0; 
-        transition: all 1s ease-in-out;
-        &:hover {            
-            opacity: 1;
-            transition: all 1s ease-in-out;
-            background: $Button-Gradient;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke: 0;
+        z-index: 100;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+        &:hover {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
+        &:hover + .full {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+    }
+    &.full { 
+        z-index: 1;
+        background: $Button-Gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0;
+        opacity: 0; 
+        transition: opacity 1s ease-in-out;
     }
 }
