@@ -17,8 +17,9 @@ main {
             font-size: 1.125em;
             color: $Grey;
         }        
-        /* Règles CSS à suivre à partir de 1080px */
+        
         @media (min-width: 1080px) {
+            /* Règles CSS à suivre à partir de 1080px */
             h1 {
                 font-size: 2em;
             }
@@ -28,8 +29,8 @@ main {
     /* Partie fonctionnement */
     .procedure {
         padding: 30px 20px;
-        /* Règles CSS à suivre à partir de 1080px */
         @media (min-width: 1080px) {
+            /* Règles CSS à suivre à partir de 1080px */
             padding: 30px 180px;
         }
         h1 {
@@ -40,12 +41,12 @@ main {
             display: flex;
                 flex-direction: column;
                 gap: 25px;
-                /* Règles CSS à suivre à partir de 768px */
                 @media (min-width: 768px) {
+                    /* Règles CSS à suivre à partir de 768px */
                     padding: 0 200px;
                 }
-                /* Règles CSS à suivre à partir de 1200px */
                 @media (min-width: 1200px) {
+                    /* Règles CSS à suivre à partir de 1200px */
                     flex-direction: row;
                     padding: 0;
                 }
@@ -55,25 +56,25 @@ main {
             font-weight: 500;
             border-radius: 20px;
             background-color: $Background;
-            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            @include cards-shadow(0, 4px, 15px, 0, 0.15);
             padding: 30px 40px 30px;
             display: flex;
                 flex-direction: row;
                 gap: 10px;
-                /* Règles CSS à suivre à partir de 1200px */
                 @media (min-width: 1200px) {
+                    /* Règles CSS à suivre à partir de 1200px */
                     flex: 1;
                     padding: 30px 0 30px 40px;
                 }
-                /* Règles CSS à suivre à partir de 1300px */
                 @media (min-width: 1300px) {
+                    /* Règles CSS à suivre à partir de 1300px */
                     padding: 30px 40px 30px 40px;
                 }
             &:hover {
-                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                @include cards-shadow(0, 4px, 15px, 0, 0.25);
             }
             .circle {
-                border-radius: 50%;
+                @include circle;
                 width: 24px;
                 height: 24px;
                 background: $Primary;
@@ -103,8 +104,8 @@ main {
         h1 {
             font-size: 1.5em;
         }
-        /* Règles CSS à suivre à partir de 1080px */
         @media (min-width: 1080px) {
+            /* Règles CSS à suivre à partir de 1080px */
             padding: 30px 180px;
         }
         display: flex;
@@ -114,20 +115,21 @@ main {
                 display: flex;
                     flex-direction: column;
                     gap: 18px;
-                /* Règles CSS à suivre à partir de 1080px */
+                
                 @media (min-width: 1080px) {
+                    /* Règles CSS à suivre à partir de 1080px */
                     display: flex;
                         flex-direction: row;
                         flex-wrap: wrap;
                         row-gap: 30px;
                         column-gap: 50px;
                         a {
-                            /* Règles CSS à suivre à partir de 1080px */
                             @media (min-width: 1080px) {
+                                /* Règles CSS à suivre à partir de 1080px */
                                 width: 46%;
                             }
-                            /* Règles CSS à suivre à partir de 1300px */
                             @media (min-width: 1300px) {
+                                /* Règles CSS à suivre à partir de 1300px */
                                 width: 47%;
                             }
                         }
@@ -137,7 +139,7 @@ main {
         .card {
             border-radius: 15px;
             background-color: white;
-            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+            @include cards-shadow(0, 4px, 15px, 0, 0.10);
             position: relative;
             flex: 1 1 40%;
             &:hover {
@@ -148,16 +150,16 @@ main {
                 height: 231px;
                 object-fit: cover;
                 border-radius: 15px 15px 0 0;
-                /* Règles CSS à suivre jusqu'à 450px */
                 @media (max-width: 450px) {
+                    /* Règles CSS à suivre jusqu'à 450px */
                     height: 180px;
                 }
-                /* Règles CSS à suivre à partir de 768px */
                 @media (min-width: 768px) {
+                    /* Règles CSS à suivre à partir de 768px */
                     height: 300px;
                 }
-                /* Règles CSS à suivre à partir de 1080px */
                 @media (min-width: 1080px) {
+                    /* Règles CSS à suivre à partir de 1080px */
                     height: 231px;
                 }
             }
@@ -168,7 +170,7 @@ main {
                 font-size: 0.875em;
                 background-color: $Green;
                 color: $Green-Font;
-                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                @include cards-shadow(0, 2px, 4px, 0, 0.15);
                 position: absolute;
                 top: 12px;
                 right: 12px;

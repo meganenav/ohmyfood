@@ -1,0 +1,7 @@
+@mixin cards-shadow ($top, $right, $bottom, $left, $opacity) {
+    box-shadow: $top $right $bottom $left rgba(0, 0, 0, $opacity);
+}
+
+@mixin circle {
+    border-radius: 50%;
+}

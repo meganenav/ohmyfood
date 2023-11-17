@@ -5,8 +5,9 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
-        /* Règles CSS à suivre à partir de 1080px */
+        
         @media (min-width: 1080px) {
+            /* Règles CSS à suivre à partir de 1080px */
             padding: 30px 25px;
             height: 54px;
             flex-direction: row-reverse;
@@ -17,15 +18,16 @@ footer {
         font-family: 'Shrikhand', serif;
         text-decoration: none;
         font-size: 1.125em;
-        /* Règles CSS à suivre à partir de 1080px */
+        
         @media (min-width: 1080px) {
+            /* Règles CSS à suivre à partir de 1080px */
             width: 138px;
         }
     }
     ul {
         font-size: 1em;
-        /* Règles CSS à suivre à partir de 768px */
         @media (min-width: 768px) {
+            /* Règles CSS à suivre à partir de 768px */
             display: flex;
             flex-direction: row;
             gap: 10px;
