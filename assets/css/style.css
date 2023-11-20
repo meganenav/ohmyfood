@@ -448,6 +448,13 @@ header .logo-header-block {
   display: flex;
   align-items: center;
 }
+@media (min-width: 1080px) {
+  header .logo-header-block {
+    /* Règles CSS à suivre à partir de 1080px */
+    padding: 30px 0 30px 0;
+    height: 100%;
+  }
+}
 header .logo-header {
   width: 162px;
 }
@@ -523,6 +530,12 @@ main .headline {
 main .headline h1 {
   font-size: 1.5em;
 }
+@media (min-width: 1080px) {
+  main .headline h1 {
+    /* Règles CSS à suivre à partir de 1080px */
+    font-size: 2.5em;
+  }
+}
 main .headline p {
   font-weight: 300;
   font-size: 1.125em;
@@ -531,10 +544,7 @@ main .headline p {
 @media (min-width: 1080px) {
   main .headline {
     /* Règles CSS à suivre à partir de 1080px */
-    padding: 50px 180px;
-  }
-  main .headline h1 {
-    font-size: 2em;
+    padding: 30px 180px;
   }
 }
 main .procedure {
@@ -543,7 +553,7 @@ main .procedure {
 @media (min-width: 1080px) {
   main .procedure {
     /* Règles CSS à suivre à partir de 1080px */
-    padding: 30px 180px;
+    padding: 50px 180px;
   }
 }
 main .procedure h1 {
@@ -869,6 +879,7 @@ main .restaurants-list .card .card-liked {
 }
 .page-restaurant .menu-restaurant .menu-list .cards-list .card .card-content .card-text .card-title h3 {
   /* On affecte une ellipse au titre si besoin */
+  font-size: 1.125em;
   transition: width 1s ease;
   margin: 0;
   font-weight: 500;
