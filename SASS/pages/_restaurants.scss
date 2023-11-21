@@ -1,4 +1,4 @@
-/* Pages des menus des restaurants*/
+/***** Pages des menus des restaurants *****/
 /* Header spécifiques aux pages des restaurants */
 .header-restaurant {
     flex-direction: row;
@@ -24,17 +24,17 @@
     .title-restaurant {
         padding: 32px 50px 0 20px;
         display: flex;
-            justify-content: space-between;
-            h1 {
-                font-family: 'Shrikhand', serif;
-                font-weight: 400;
-                font-size: 1.75em;
-            }
+            justify-content: space-between;            
             @media (min-width: 1080px) {
                 /* Règles CSS à suivre à partir de 1080px */
                 justify-content: center;
                 gap: 20px;
             } 
+            h1 {
+                font-family: 'Shrikhand', serif;
+                font-weight: 400;
+                font-size: 1.75em;
+            }
             .card-liked {
                 display: flex;
                     align-items: center;

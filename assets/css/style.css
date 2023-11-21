@@ -308,6 +308,7 @@ template {
   display: none;
 }
 
+/***** Règles CSS globales *****/
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -332,6 +333,7 @@ body a {
   color: black;
 }
 
+/***** Animations *****/
 /* Loader */
 .homepage {
   overflow-y: hidden;
@@ -438,6 +440,7 @@ body a {
     opacity: 1;
   }
 }
+/***** Header ****/
 header {
   display: flex;
   flex-direction: column;
@@ -468,6 +471,7 @@ header .location-block {
   gap: 17px;
 }
 
+/***** Footer ****/
 footer {
   padding: 22px 25px;
   background-color: #353535;
@@ -512,13 +516,9 @@ footer ul li a {
   color: white;
 }
 
-/* Mise en forme de la page d'accueil */
-main {
-  /* Grand titre et descriptif */
-  /* Partie fonctionnement */
-  /* Encarts pour les restaurants */
-}
-main .headline {
+/***** Mise en forme de la page d'accueil *****/
+/* Grand titre et descriptif */
+.headline {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -527,58 +527,60 @@ main .headline {
   background-color: #F6F6F6;
   padding: 50px 30px;
 }
-main .headline h1 {
+.headline h1 {
   font-size: 1.5em;
 }
 @media (min-width: 1080px) {
-  main .headline h1 {
+  .headline h1 {
     /* Règles CSS à suivre à partir de 1080px */
     font-size: 2.5em;
   }
 }
-main .headline p {
+.headline p {
   font-weight: 300;
   font-size: 1.125em;
   color: #353535;
 }
 @media (min-width: 1080px) {
-  main .headline {
+  .headline {
     /* Règles CSS à suivre à partir de 1080px */
     padding: 30px 180px;
   }
 }
-main .procedure {
+
+/* Partie fonctionnement */
+.procedure {
   padding: 30px 20px;
 }
 @media (min-width: 1080px) {
-  main .procedure {
+  .procedure {
     /* Règles CSS à suivre à partir de 1080px */
     padding: 50px 180px;
   }
 }
-main .procedure h1 {
+.procedure h1 {
   font-size: 1.5em;
   margin-bottom: 26px;
 }
-main .procedure ul {
+.procedure ul {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 @media (min-width: 768px) {
-  main .procedure ul {
+  .procedure ul {
     /* Règles CSS à suivre à partir de 768px */
     padding: 0 200px;
   }
 }
 @media (min-width: 1200px) {
-  main .procedure ul {
+  .procedure ul {
     /* Règles CSS à suivre à partir de 1200px */
     flex-direction: row;
     padding: 0;
   }
 }
-main .procedure li {
+.procedure li {
   font-size: 1em;
   font-weight: 500;
   border-radius: 20px;
@@ -590,22 +592,22 @@ main .procedure li {
   gap: 10px;
 }
 @media (min-width: 1200px) {
-  main .procedure li {
+  .procedure li {
     /* Règles CSS à suivre à partir de 1200px */
     flex: 1;
     padding: 30px 0 30px 40px;
   }
 }
 @media (min-width: 1300px) {
-  main .procedure li {
+  .procedure li {
     /* Règles CSS à suivre à partir de 1300px */
     padding: 30px 40px 30px 40px;
   }
 }
-main .procedure li:hover {
+.procedure li:hover {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
 }
-main .procedure li .circle {
+.procedure li .circle {
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -616,40 +618,42 @@ main .procedure li .circle {
   align-items: center;
   justify-content: center;
 }
-main .procedure li .procedure-number {
+.procedure li .procedure-number {
   left: -52px;
   position: relative;
 }
-main .procedure li .procedure-icon {
+.procedure li .procedure-icon {
   margin-left: -30px;
   color: #7E7E7E;
 }
-main .procedure li .procedure-icon.fa-store {
+.procedure li .procedure-icon.fa-store {
   color: #9356DC;
 }
-main .restaurants-list {
+
+/* Encarts pour les restaurants */
+.restaurants-list {
   background-color: #F6F6F6;
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-main .restaurants-list h1 {
+.restaurants-list h1 {
   font-size: 1.5em;
 }
 @media (min-width: 1080px) {
-  main .restaurants-list {
+  .restaurants-list {
     /* Règles CSS à suivre à partir de 1080px */
     padding: 30px 180px;
   }
 }
-main .restaurants-list .cards-section {
+.restaurants-list .cards-section {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 @media (min-width: 1080px) {
-  main .restaurants-list .cards-section {
+  .restaurants-list .cards-section {
     /* Règles CSS à suivre à partir de 1080px */
     display: flex;
     flex-direction: row;
@@ -659,52 +663,52 @@ main .restaurants-list .cards-section {
   }
 }
 @media (min-width: 1080px) and (min-width: 1080px) {
-  main .restaurants-list .cards-section a {
+  .restaurants-list .cards-section a {
     /* Règles CSS à suivre à partir de 1080px */
     width: 46%;
   }
 }
 @media (min-width: 1080px) and (min-width: 1300px) {
-  main .restaurants-list .cards-section a {
+  .restaurants-list .cards-section a {
     /* Règles CSS à suivre à partir de 1300px */
     width: 47%;
   }
 }
-main .restaurants-list .card {
+.restaurants-list .card {
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   position: relative;
   flex: 1 1 40%;
 }
-main .restaurants-list .card:hover {
+.restaurants-list .card:hover {
   transform: scale(1.02);
 }
-main .restaurants-list .card img {
+.restaurants-list .card img {
   width: 100%;
   height: 231px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 @media (max-width: 450px) {
-  main .restaurants-list .card img {
+  .restaurants-list .card img {
     /* Règles CSS à suivre jusqu'à 450px */
     height: 180px;
   }
 }
 @media (min-width: 768px) {
-  main .restaurants-list .card img {
+  .restaurants-list .card img {
     /* Règles CSS à suivre à partir de 768px */
     height: 300px;
   }
 }
 @media (min-width: 1080px) {
-  main .restaurants-list .card img {
+  .restaurants-list .card img {
     /* Règles CSS à suivre à partir de 1080px */
     height: 231px;
   }
 }
-main .restaurants-list .card .new-restaurant {
+.restaurants-list .card .new-restaurant {
   width: 80px;
   height: 29px;
   font-weight: 500;
@@ -720,24 +724,24 @@ main .restaurants-list .card .new-restaurant {
   align-items: center;
   justify-content: space-around;
 }
-main .restaurants-list .card .card-content {
+.restaurants-list .card .card-content {
   padding: 12px 30px 12px 13px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-main .restaurants-list .card .card-title {
+.restaurants-list .card .card-title {
   font-weight: 700;
   font-size: 1.125em;
   margin: 0;
 }
-main .restaurants-list .card .card-subtitle {
+.restaurants-list .card .card-subtitle {
   font-weight: 300;
   font-size: 1.0625em;
   margin: 0;
 }
-main .restaurants-list .card .card-liked {
+.restaurants-list .card .card-liked {
   position: absolute;
   right: 30px;
   bottom: 30px;
@@ -746,7 +750,7 @@ main .restaurants-list .card .card-liked {
   align-items: center;
 }
 
-/* Pages des menus des restaurants*/
+/***** Pages des menus des restaurants *****/
 /* Header spécifiques aux pages des restaurants */
 .header-restaurant {
   flex-direction: row;
@@ -772,17 +776,17 @@ main .restaurants-list .card .card-liked {
   display: flex;
   justify-content: space-between;
 }
-.page-restaurant .title-restaurant h1 {
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  font-size: 1.75em;
-}
 @media (min-width: 1080px) {
   .page-restaurant .title-restaurant {
     /* Règles CSS à suivre à partir de 1080px */
     justify-content: center;
     gap: 20px;
   }
+}
+.page-restaurant .title-restaurant h1 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: 1.75em;
 }
 .page-restaurant .title-restaurant .card-liked {
   display: flex;
@@ -934,6 +938,7 @@ main .restaurants-list .card .card-liked {
   margin: 40px 0;
 }
 
+/***** Boutons *****/
 /* Modèle de bouton en dégradé */
 .button-gradient {
   border-radius: 25px;

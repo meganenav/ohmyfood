@@ -1,3 +1,4 @@
+/***** Footer ****/
 footer {    
     padding: 22px 25px;
     background-color: $Grey;
@@ -5,7 +6,6 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
-        
         @media (min-width: 1080px) {
             /* Règles CSS à suivre à partir de 1080px */
             padding: 30px 25px;
@@ -18,7 +18,6 @@ footer {
         font-family: 'Shrikhand', serif;
         text-decoration: none;
         font-size: 1.125em;
-        
         @media (min-width: 1080px) {
             /* Règles CSS à suivre à partir de 1080px */
             width: 138px;

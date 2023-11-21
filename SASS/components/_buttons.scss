@@ -1,3 +1,4 @@
+/***** Boutons *****/
 /* Modèle de bouton en dégradé */
 .button-gradient {
     border-radius: 25px;
@@ -18,7 +19,7 @@
         transition: 
             opacity 500ms ease-in-out,
             box-shadow 500ms ease-in-out;
-    }
+        }
 }
 /* Coeur avec son animation*/
 .fa-heart {

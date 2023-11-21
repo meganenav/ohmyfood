@@ -1,210 +1,207 @@
-/* Mise en forme de la page d'accueil */
-main {
-    /* Grand titre et descriptif */
-    .headline {
-        display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        text-align: center;
-        background-color: $Background;
-        padding: 50px 30px;
-        h1 {
-            font-size: 1.5em;
-            @media (min-width: 1080px) {
-                /* Règles CSS à suivre à partir de 1080px */
-                font-size: 2.5em;
-            }
-        }
-        p {
-            font-weight: 300;
-            font-size: 1.125em;
-            color: $Grey;
-        }        
-        
+/***** Mise en forme de la page d'accueil *****/
+/* Grand titre et descriptif */
+.headline {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    text-align: center;
+    background-color: $Background;
+    padding: 50px 30px;
+    h1 {
+        font-size: 1.5em;
         @media (min-width: 1080px) {
             /* Règles CSS à suivre à partir de 1080px */
-            padding: 30px 180px;
+            font-size: 2.5em;
         }
     }
-    /* Partie fonctionnement */
-    .procedure {
-        padding: 30px 20px;
-        @media (min-width: 1080px) {
-            /* Règles CSS à suivre à partir de 1080px */
-            padding: 50px 180px;
+    p {
+        font-weight: 300;
+        font-size: 1.125em;
+        color: $Grey;
+    }        
+    @media (min-width: 1080px) {
+        /* Règles CSS à suivre à partir de 1080px */
+        padding: 30px 180px;
+    }
+}
+/* Partie fonctionnement */
+.procedure {
+    padding: 30px 20px;
+    @media (min-width: 1080px) {
+        /* Règles CSS à suivre à partir de 1080px */
+        padding: 50px 180px;
+    }
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 26px;
+    }
+    ul {
+        display: flex;
+            flex-direction: column;
+            gap: 25px;
+            @media (min-width: 768px) {
+                /* Règles CSS à suivre à partir de 768px */
+                padding: 0 200px;
+            }
+            @media (min-width: 1200px) {
+                /* Règles CSS à suivre à partir de 1200px */
+                flex-direction: row;
+                padding: 0;
+            }
+    }
+    li {
+        font-size: 1em;
+        font-weight: 500;
+        border-radius: 20px;
+        background-color: $Background;
+        @include cards-shadow(0, 4px, 15px, 0, 0.15);
+        padding: 30px 40px 30px;
+        display: flex;
+            flex-direction: row;
+            gap: 10px;
+            @media (min-width: 1200px) {
+                /* Règles CSS à suivre à partir de 1200px */
+                flex: 1;
+                padding: 30px 0 30px 40px;
+            }
+            @media (min-width: 1300px) {
+                /* Règles CSS à suivre à partir de 1300px */
+                padding: 30px 40px 30px 40px;
+            }
+        &:hover {
+            @include cards-shadow(0, 4px, 15px, 0, 0.25);
         }
-        h1 {
-            font-size: 1.5em;
-            margin-bottom: 26px;
+        .circle {
+            @include circle;
+            width: 24px;
+            height: 24px;
+            background: $Primary;
+            color: white;
+            font-size: 14.182px;
+            display: flex;
+                align-items: center;
+                justify-content: center;
         }
-        ul {
+        .procedure-number {
+            left: -52px;
+            position: relative;
+        }
+        .procedure-icon {
+            margin-left: -30px;
+            color: $Grey-tint-4;
+            &.fa-store {
+                color: $Primary;
+            }
+        }
+    }
+}
+/* Encarts pour les restaurants */
+.restaurants-list {
+    background-color: $Background;
+    padding: 30px 20px;
+    h1 {
+        font-size: 1.5em;
+    }
+    @media (min-width: 1080px) {
+        /* Règles CSS à suivre à partir de 1080px */
+        padding: 30px 180px;
+    }
+    display: flex;
+        flex-direction: column;
+        gap: 18px;
+        .cards-section {
             display: flex;
                 flex-direction: column;
-                gap: 25px;
-                @media (min-width: 768px) {
-                    /* Règles CSS à suivre à partir de 768px */
-                    padding: 0 200px;
-                }
-                @media (min-width: 1200px) {
-                    /* Règles CSS à suivre à partir de 1200px */
+                gap: 18px;
+            
+            @media (min-width: 1080px) {
+                /* Règles CSS à suivre à partir de 1080px */
+                display: flex;
                     flex-direction: row;
-                    padding: 0;
-                }
+                    flex-wrap: wrap;
+                    row-gap: 30px;
+                    column-gap: 50px;
+                    a {
+                        @media (min-width: 1080px) {
+                            /* Règles CSS à suivre à partir de 1080px */
+                            width: 46%;
+                        }
+                        @media (min-width: 1300px) {
+                            /* Règles CSS à suivre à partir de 1300px */
+                            width: 47%;
+                        }
+                    }
+            }
         }
-        li {
-            font-size: 1em;
+
+    .card {
+        border-radius: 15px;
+        background-color: white;
+        @include cards-shadow(0, 4px, 15px, 0, 0.10);
+        position: relative;
+        flex: 1 1 40%;
+        &:hover {
+            transform: scale(1.02);
+        }
+        img {
+            width: 100%;
+            height: 231px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            @media (max-width: 450px) {
+                /* Règles CSS à suivre jusqu'à 450px */
+                height: 180px;
+            }
+            @media (min-width: 768px) {
+                /* Règles CSS à suivre à partir de 768px */
+                height: 300px;
+            }
+            @media (min-width: 1080px) {
+                /* Règles CSS à suivre à partir de 1080px */
+                height: 231px;
+            }
+        }
+        .new-restaurant {
+            width: 80px;
+            height: 29px;
             font-weight: 500;
-            border-radius: 20px;
-            background-color: $Background;
-            @include cards-shadow(0, 4px, 15px, 0, 0.15);
-            padding: 30px 40px 30px;
+            font-size: 0.875em;
+            background-color: $Green;
+            color: $Green-Font;
+            @include cards-shadow(0, 2px, 4px, 0, 0.15);
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 100;
+            display: flex;
+                align-items: center;
+                justify-content: space-around;
+        }
+        .card-content {
+            padding: 12px 30px 12px 13px;
             display: flex;
                 flex-direction: row;
-                gap: 10px;
-                @media (min-width: 1200px) {
-                    /* Règles CSS à suivre à partir de 1200px */
-                    flex: 1;
-                    padding: 30px 0 30px 40px;
-                }
-                @media (min-width: 1300px) {
-                    /* Règles CSS à suivre à partir de 1300px */
-                    padding: 30px 40px 30px 40px;
-                }
-            &:hover {
-                @include cards-shadow(0, 4px, 15px, 0, 0.25);
-            }
-            .circle {
-                @include circle;
-                width: 24px;
-                height: 24px;
-                background: $Primary;
-                color: white;
-                font-size: 14.182px;
-                display: flex;
-                    align-items: center;
-                    justify-content: center;
-            }
-            .procedure-number {
-                left: -52px;
-                position: relative;
-            }
-            .procedure-icon {
-                margin-left: -30px;
-                color: $Grey-tint-4;
-                &.fa-store {
-                    color: $Primary;
-                }
-            }
+                align-items: center;
+                justify-content: space-between;
         }
-    }
-    /* Encarts pour les restaurants */
-    .restaurants-list {
-        background-color: $Background;
-        padding: 30px 20px;
-        h1 {
-            font-size: 1.5em;
+        .card-title {
+            font-weight: 700;
+            font-size: 1.125em;
+            margin: 0;
         }
-        @media (min-width: 1080px) {
-            /* Règles CSS à suivre à partir de 1080px */
-            padding: 30px 180px;
+        .card-subtitle {
+            font-weight: 300;
+            font-size: 1.0625em;
+            margin: 0;
         }
-        display: flex;
-            flex-direction: column;
-            gap: 18px;
-            .cards-section {
-                display: flex;
-                    flex-direction: column;
-                    gap: 18px;
-                
-                @media (min-width: 1080px) {
-                    /* Règles CSS à suivre à partir de 1080px */
-                    display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        row-gap: 30px;
-                        column-gap: 50px;
-                        a {
-                            @media (min-width: 1080px) {
-                                /* Règles CSS à suivre à partir de 1080px */
-                                width: 46%;
-                            }
-                            @media (min-width: 1300px) {
-                                /* Règles CSS à suivre à partir de 1300px */
-                                width: 47%;
-                            }
-                        }
-                }
-            }
-
-        .card {
-            border-radius: 15px;
-            background-color: white;
-            @include cards-shadow(0, 4px, 15px, 0, 0.10);
-            position: relative;
-            flex: 1 1 40%;
-            &:hover {
-                transform: scale(1.02);
-            }
-            img {
-                width: 100%;
-                height: 231px;
-                object-fit: cover;
-                border-radius: 15px 15px 0 0;
-                @media (max-width: 450px) {
-                    /* Règles CSS à suivre jusqu'à 450px */
-                    height: 180px;
-                }
-                @media (min-width: 768px) {
-                    /* Règles CSS à suivre à partir de 768px */
-                    height: 300px;
-                }
-                @media (min-width: 1080px) {
-                    /* Règles CSS à suivre à partir de 1080px */
-                    height: 231px;
-                }
-            }
-            .new-restaurant {
-                width: 80px;
-                height: 29px;
-                font-weight: 500;
-                font-size: 0.875em;
-                background-color: $Green;
-                color: $Green-Font;
-                @include cards-shadow(0, 2px, 4px, 0, 0.15);
-                position: absolute;
-                top: 12px;
-                right: 12px;
-                z-index: 100;
-                display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-            }
-            .card-content {
-                padding: 12px 30px 12px 13px;
-                display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-            }
-            .card-title {
-                font-weight: 700;
-                font-size: 1.125em;
-                margin: 0;
-            }
-            .card-subtitle {
-                font-weight: 300;
-                font-size: 1.0625em;
-                margin: 0;
-            }
-            .card-liked {
-                position: absolute;
-                right: 30px;
-                bottom: 30px;
-                display: flex;
-                    justify-content: center;
-                    align-items: center;
-            }
+        .card-liked {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            display: flex;
+                justify-content: center;
+                align-items: center;
         }
     }
 }
