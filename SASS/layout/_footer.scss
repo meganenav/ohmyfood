@@ -3,16 +3,16 @@ footer {
     padding: 22px 25px;
     background-color: $Grey;
     display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        @media (min-width: 1080px) {
-            /* Règles CSS à suivre à partir de 1080px */
-            padding: 30px 25px;
-            height: 54px;
-            flex-direction: row-reverse;
-            align-items: flex-end;
-        }
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    @media (min-width: 1080px) {
+        /* Règles CSS à suivre à partir de 1080px */
+        padding: 30px 25px;
+        height: 54px;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+    }
     .logo-text {
         color: white;
         font-family: 'Shrikhand', serif;

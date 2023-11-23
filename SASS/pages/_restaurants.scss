@@ -4,13 +4,11 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 0 44px 0 17px;
-    .return-homepage {
-        .fa-arrow-left {
-            font-size: 30px;
-            &:hover {
-                /* La flèche se décale lors du passage de la souris */
-                transform: translateX(5px);
-            }
+    .return-homepage .fa-arrow-left {
+        font-size: 30px;
+        &:hover {
+            /* La flèche se décale lors du passage de la souris */
+            transform: translateX(5px);
         }
     }
 }
@@ -24,21 +22,21 @@
     .title-restaurant {
         padding: 32px 50px 0 20px;
         display: flex;
-            justify-content: space-between;            
-            @media (min-width: 1080px) {
-                /* Règles CSS à suivre à partir de 1080px */
-                justify-content: center;
-                gap: 20px;
-            } 
-            h1 {
-                font-family: 'Shrikhand', serif;
-                font-weight: 400;
-                font-size: 1.75em;
-            }
-            .card-liked {
-                display: flex;
-                    align-items: center;
-            }
+        justify-content: space-between;            
+        @media (min-width: 1080px) {
+            /* Règles CSS à suivre à partir de 1080px */
+            justify-content: center;
+            gap: 20px;
+        } 
+        h1 {
+            font-family: 'Shrikhand', serif;
+            font-weight: 400;
+            font-size: 1.75em;
+        }
+        .card-liked {
+            display: flex;
+            align-items: center;
+        }
     }
     .menu-restaurant {
         background-color: $Background;
@@ -72,8 +70,8 @@
             .cards-list {
                 margin-top: 10px;
                 display: flex;
-                    flex-direction: column;
-                    gap: 10px;
+                flex-direction: column;
+                gap: 10px;
                 .card {
                     /* Au passage de la souris, les transitions se lancent */
                     &:hover {
@@ -105,80 +103,80 @@
                     @include cards-shadow(0, 5px, 15px, 0, 0.10);
                     overflow: hidden;
                     display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    .card-content {
+                        display: flex;
                         flex-direction: row;
                         justify-content: space-between;
-                        align-items: center;
-                        .card-content {
+                        align-items: flex-end;
+                        flex: 1 1 100%;
+                        width: 90%;
+                        .card-text {
                             display: flex;
-                                flex-direction: row;
-                                justify-content: space-between;
-                                align-items: flex-end;
-                                flex: 1 1 100%;
-                            width: 90%;
-                            .card-text {
-                                display: flex;
-                                    flex-direction: column;
-                                    min-width: 0;
-                                    flex: 1 1 100%;
-                                    gap: 5px;
-                                    .card-title h3 {
-                                        /* On affecte une ellipse au titre si besoin */
-                                        font-size: 1.125em;
-                                        transition: width 1s ease;
-                                        margin: 0;
-                                        font-weight: 500;
-                                        text-overflow: ellipsis;
-                                        white-space: nowrap;
-                                        overflow: hidden;
-                                        width: calc(100%);
-                                    }
-                                    .card-subtitle p {
-                                        /* On affecte une ellipse au descriptif si besoin*/
-                                        transition: width 1s ease;
-                                        margin: 0;
-                                        font-weight: 300;
-                                        font-size: 1em;
-                                        text-overflow: ellipsis;
-                                        white-space: nowrap;
-                                        overflow: hidden;
-                                        width: calc(100%);
-                                    }
+                            flex-direction: column;
+                            min-width: 0;
+                            flex: 1 1 100%;
+                            gap: 5px;
+                            .card-title h3 {
+                                /* On affecte une ellipse au titre si besoin */
+                                font-size: 1.125em;
+                                transition: width 1s ease;
+                                margin: 0;
+                                font-weight: 500;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                width: calc(100%);
                             }
-                            .price {
-                                transition: right 1s ease;
-                                font-weight: 700;
+                            .card-subtitle p {
+                                /* On affecte une ellipse au descriptif si besoin*/
+                                transition: width 1s ease;
+                                margin: 0;
+                                font-weight: 300;
                                 font-size: 1em;
-                                position: relative;
-                                right: 0;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                width: calc(100%);
                             }
                         }
-                        .coche {
+                        .price {
                             transition: right 1s ease;
-                            position: absolute;
-                            right: -60px;
-                            background: $Green;
-                            height: 46px;
-                            width: 25px;
-                            padding: 16px;                    
-                            border-radius: 0 15px 15px 0;
-                            opacity: 1;
-                            display: flex;
-                                align-items: center;
-                                justify-content: center;
-                            .fa-check {
-                                background-color: white;
-                                color: $Green;
-                                @include circle;
-                                padding: 5px;
-                            }
+                            font-weight: 700;
+                            font-size: 1em;
+                            position: relative;
+                            right: 0;
                         }
+                    }
+                    .coche {
+                        transition: right 1s ease;
+                        position: absolute;
+                        right: -60px;
+                        background: $Green;
+                        height: 46px;
+                        width: 25px;
+                        padding: 16px;                    
+                        border-radius: 0 15px 15px 0;
+                        opacity: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .fa-check {
+                            background-color: white;
+                            color: $Green;
+                            @include circle;
+                            padding: 5px;
+                        }
+                    }
                 }
 
             }
         }
         .order {
             display: flex;
-                justify-content: center;
+            justify-content: center;
             .button-order {
                 margin: 40px 0;
             }

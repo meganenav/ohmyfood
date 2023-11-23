@@ -2,9 +2,9 @@
 /* Grand titre et descriptif */
 .headline {
     display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     background-color: $Background;
     padding: 50px 30px;
@@ -38,17 +38,17 @@
     }
     ul {
         display: flex;
-            flex-direction: column;
-            gap: 25px;
-            @media (min-width: 768px) {
-                /* Règles CSS à suivre à partir de 768px */
-                padding: 0 200px;
-            }
-            @media (min-width: 1200px) {
-                /* Règles CSS à suivre à partir de 1200px */
-                flex-direction: row;
-                padding: 0;
-            }
+        flex-direction: column;
+        gap: 25px;
+        @media (min-width: 768px) {
+            /* Règles CSS à suivre à partir de 768px */
+            padding: 0 200px;
+        }
+        @media (min-width: 1200px) {
+            /* Règles CSS à suivre à partir de 1200px */
+            flex-direction: row;
+            padding: 0;
+        }
     }
     li {
         font-size: 1em;
@@ -58,17 +58,17 @@
         @include cards-shadow(0, 4px, 15px, 0, 0.15);
         padding: 30px 40px 30px;
         display: flex;
-            flex-direction: row;
-            gap: 10px;
-            @media (min-width: 1200px) {
-                /* Règles CSS à suivre à partir de 1200px */
-                flex: 1;
-                padding: 30px 0 30px 40px;
-            }
-            @media (min-width: 1300px) {
-                /* Règles CSS à suivre à partir de 1300px */
-                padding: 30px 40px 30px 40px;
-            }
+        flex-direction: row;
+        gap: 10px;
+        @media (min-width: 1200px) {
+            /* Règles CSS à suivre à partir de 1200px */
+            flex: 1;
+            padding: 30px 0 30px 40px;
+        }
+        @media (min-width: 1300px) {
+            /* Règles CSS à suivre à partir de 1300px */
+            padding: 30px 40px 30px 40px;
+        }
         &:hover {
             @include cards-shadow(0, 4px, 15px, 0, 0.25);
         }
@@ -80,8 +80,8 @@
             color: white;
             font-size: 14.182px;
             display: flex;
-                align-items: center;
-                justify-content: center;
+            align-items: center;
+            justify-content: center;
         }
         .procedure-number {
             left: -52px;
@@ -108,33 +108,31 @@
         padding: 30px 180px;
     }
     display: flex;
+    flex-direction: column;
+    gap: 18px;
+    .cards-section {
+        display: flex;
         flex-direction: column;
         gap: 18px;
-        .cards-section {
+        @media (min-width: 1080px) {
+            /* Règles CSS à suivre à partir de 1080px */
             display: flex;
-                flex-direction: column;
-                gap: 18px;
-            
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 30px;
+            column-gap: 50px;
+        }
+        a {
             @media (min-width: 1080px) {
                 /* Règles CSS à suivre à partir de 1080px */
-                display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    row-gap: 30px;
-                    column-gap: 50px;
-                    a {
-                        @media (min-width: 1080px) {
-                            /* Règles CSS à suivre à partir de 1080px */
-                            width: 46%;
-                        }
-                        @media (min-width: 1300px) {
-                            /* Règles CSS à suivre à partir de 1300px */
-                            width: 47%;
-                        }
-                    }
+                width: 46%;
+            }
+            @media (min-width: 1300px) {
+                /* Règles CSS à suivre à partir de 1300px */
+                width: 47%;
             }
         }
-
+    }
     .card {
         border-radius: 15px;
         background-color: white;
@@ -175,15 +173,15 @@
             right: 12px;
             z-index: 100;
             display: flex;
-                align-items: center;
-                justify-content: space-around;
+            align-items: center;
+            justify-content: space-around;
         }
         .card-content {
             padding: 12px 30px 12px 13px;
             display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
         }
         .card-title {
             font-weight: 700;
@@ -200,8 +198,8 @@
             right: 30px;
             bottom: 30px;
             display: flex;
-                justify-content: center;
-                align-items: center;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

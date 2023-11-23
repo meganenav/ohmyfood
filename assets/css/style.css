@@ -662,13 +662,13 @@ footer ul li a {
     column-gap: 50px;
   }
 }
-@media (min-width: 1080px) and (min-width: 1080px) {
+@media (min-width: 1080px) {
   .restaurants-list .cards-section a {
     /* Règles CSS à suivre à partir de 1080px */
     width: 46%;
   }
 }
-@media (min-width: 1080px) and (min-width: 1300px) {
+@media (min-width: 1300px) {
   .restaurants-list .cards-section a {
     /* Règles CSS à suivre à partir de 1300px */
     width: 47%;
@@ -958,7 +958,7 @@ footer ul li a {
   transition: opacity 500ms ease-in-out, box-shadow 500ms ease-in-out;
 }
 
-/* Coeur avec son animation*/
+/* Coeur avec son animation */
 .fa-heart {
   font-size: 22px;
   position: absolute;
